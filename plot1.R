@@ -5,5 +5,5 @@ df$asDate <- as.Date(df$Date, format = "%d/%m/%Y")
 df <- df[df$asDate > "2007-01-31" & df$asDate < "2007-02-03",]
 if(file.exists("plot1.png")) {file.remove("plot1.png")}
 png(filename = "plot1.png")
-hist(df$Global_active_power, main = "Global Active Power",xlab = "Global Active Power (kilowatts)" )
+hist(df$Global_active_power, main = "Global Active Power",xlab = "Global Active Power (kilowatts)", col = "red" )
 dev.off()
